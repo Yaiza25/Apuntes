@@ -119,3 +119,61 @@ No se recomienda hacer ni git reset en repositorios públicos por la sencilla ra
 Sin embargo, estas herramientas existen por una razón y dicha razón es que son útiles para pulir o mejorar la historia de nuestros repositorios. Por ejemplo, si tuvieras un repositorio con un montón de commits inútiles u obsoletos entonces tienes la oportunidades de juntarlos con los commits que sí son significantes y al final la historia de tu repositorio se verá ordenada y limpia.
 
 La nota de precaución es para que los demás desarrolladores que pudieron haber clonado tu repositorio no tengan problemas navegando en la historia de commits. Si eso pasa y se hacen varios amends simultáneos podría causar una confusión bastante grande en el repositorio aunque la probabilidad es muy reducida.
+
+## 8.- ¿Como recuperar una rama borrada de git?
+
+Algunas veces por cansancio o cualquier otra circunstancia se borran ramas o eliminan archivos y en pro de recuperar lo sin el conocimiento necesario terminamos empeorando la situación y cuando vamos a revisar la rama con el comando git log podemos ver que ya no existe y es cuando entra la desesperación de haber perdido trabajo valioso. a mi me paso y después de jalarme los pelos y buscar encontré una una solución que me ayudo a recuperar mi rama. los pasos son :
+
+1. Usa el comando git reflog que permite ver inclusive lo que ya no esta disponible con git log Esto sacara un listado como el siguiente de todo lo que ha pasado en git, allí ubicaremos el Head que estaba funcionando bien antes de nuestro problema, es decir al que queremos regresar.
+
+    ![imagen ejemplo](https://i.stack.imgur.com/kNdS9.png)
+
+2. Copia el GUID del HEAD que tenia la versión que quieres recuperar (el HEAD es el que está encerrado en rojo en la imagen arriba) este seria en el que aún todo funcionaba bien.
+
+3. Ahora con el comando reset podremos regresar al estado deseado, borrando DEFINITIVAMENTE todo lo que este posterior a ella, tenga cuidado el siguiente comando borra para siempre todo y regresa a un estado previo, así que asegúrese de estar tomando la versión correcta y que el Head que escogió es a donde quiere regresar, para este comando usaremos el identificador único GUID, el que esta en Azul en la siguiente imagen
+
+    ![imagen ejemplo](https://i.stack.imgur.com/SQRoV.png)
+
+    escriba el siguiente comando git reset  --hard    0f71e0d y presione enter.
+
+4. Revisa que todo debió quedar igual a como estaba cuando todo funcionaba.
+
+## 9.- Como hacer un merge de commits especificos
+
+Simplemente tenía que hacer uso de git cherry-pick
+
+1. Me pasé a la rama sdev con un simple git checkout sdev
+
+2. Busqué los identificadores únicos SHA-1 de los commit de la rama sdev con un simple:
+git log --pretty=oneline, el cual me arrojó:
+
+        <SHA-1> (origin/sdev) commit 1
+        <SHA-1> (origin/sdev) commit 2
+
+3. Me volví a pasar a la rama master (la cual es donde quería realizar el merge)
+4. Luego procedí a realizar el cherry-pick
+
+        git cherry-pick <SHA-1>
+
+    Todo OK, sin ningún problema y/o conflictos
+
+        git cherry-pick <SHA-1>
+
+    Aquí se me presentó un conflicto en varios archivos
+    Lo solucioné manualmente y procedí con
+
+        git cherry-pick --continue
+
+El cherry-pick puede ser cancelado agregando la opción --abort
+
+## 10.- ¿Cómo deshacer 'git add' antes de confirmar?
+
+Para deshacer el staging que hizo el git add ., puedes hacer:
+
+    git reset
+
+Verás que los archivos no cambian, es solo que deshaces el staging en preparación para el commit.
+
+Si, en vez de querer deshacer todo lo que hizo "git add .", mas bien quieres hacerle unstage a un solo archivo, entonces puedes usar el mismo comando, pero especificando el archivo en particular:
+
+    git reset HEAD nombre_del_archivo.ext
