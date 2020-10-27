@@ -14,6 +14,7 @@ Los comandos mas simples y necesarios que debemos saber del "Simbolo del sistema
 - move [origen] [destino] -> Mueve un archivo o directorio a otro lugar.
 - ren [nombre viejo] [nombre nuevo] -> Cambia el nombre a un directorio o archivo.
 - tree [nombre del directorio] -> Muestra una estructura de archivos de forma grafica. 
+- code . -> Abre el Visual Studio Code.
 
 Alguno de los comandos mas basicos y usados de GIT son:
 
@@ -28,6 +29,9 @@ Alguno de los comandos mas basicos y usados de GIT son:
     - git commit -a -m "[mensaje]" -> Añade todos los documentos y crea una fotografia del proyecto en ese momento.
 - git log --oneline -> Muestra los commit realizados.
 - git resert --hard -> Viajamos al commit especifico o elimina los cambios futuros o restaura los documentos.
+- git resert --soft -> Cambia la cabecera, pero conserva todo y se puede regresar con un commit.
+- git resert --mixed -> Selecciona todo lo de los commit posteriores, pero se conserva. Si se hace
+un add y commit se borra todo.
 - git clone [URL] -> Descarga un repositorio completo.
 - git push -> Sube todos los cambios locales al servidor remoto.
 - git branch [nombre] -> Creamos una nueva rama.
