@@ -15,7 +15,7 @@ Los comandos mas simples y necesarios que debemos saber del "Simbolo del sistema
 - ren [nombre viejo] [nombre nuevo] -> Cambia el nombre a un directorio o archivo.
 - tree [nombre del directorio] -> Muestra una estructura de archivos de forma grafica. 
 
-Alguno de los comandos mas basicos y usados de git son:
+Alguno de los comandos mas basicos y usados de GIT son:
 
 - git version -> Muestra la version de git instalada.
 - git init -> Inicia un nuevo repositorio o crea la carpeta oculta.
