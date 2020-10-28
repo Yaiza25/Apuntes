@@ -124,7 +124,7 @@ La nota de precaución es para que los demás desarrolladores que pudieron haber
 
 Algunas veces por cansancio o cualquier otra circunstancia se borran ramas o eliminan archivos y en pro de recuperar lo sin el conocimiento necesario terminamos empeorando la situación y cuando vamos a revisar la rama con el comando `git log` podemos ver que ya no existe y es cuando entra la desesperación de haber perdido trabajo valioso. a mi me paso y después de jalarme los pelos y buscar encontré una una solución que me ayudo a recuperar mi rama. los pasos son :
 
-1. Usa el comando `git reflog` que permite ver inclusive lo que ya no esta disponible con `git log` Esto sacara un listado como el siguiente de todo lo que ha pasado en git, allí ubicaremos el Head que estaba funcionando bien antes de nuestro problema, es decir al que queremos regresar.
+1. Usa el comando `git reflog` que permite ver inclusive lo que ya no esta disponible con `git log`. Esto sacara un listado como el siguiente de todo lo que ha pasado en git, allí ubicaremos el Head que estaba funcionando bien antes de nuestro problema, es decir al que queremos regresar.
 
     ![imagen ejemplo](https://i.stack.imgur.com/kNdS9.png)
 
@@ -163,7 +163,7 @@ Simplemente tenía que hacer uso de `git cherry-pick`
 
         git cherry-pick --continue
 
-El cherry-pick puede ser cancelado agregando la opción --abort
+El cherry-pick puede ser cancelado agregando la opción `git cherry-pick --abort`
 
 ## 10.- ¿Cómo deshacer 'git add' antes de confirmar?
 
