@@ -174,6 +174,6 @@ Para deshacer el staging que hizo el git add ., puedes hacer:
 
 Verás que los archivos no cambian, es solo que deshaces el staging en preparación para el commit.
 
-Si, en vez de querer deshacer todo lo que hizo "git add .", mas bien quieres hacerle unstage a un solo archivo, entonces puedes usar el mismo comando, pero especificando el archivo en particular:
+Si, en vez de querer deshacer todo lo que hizo `git add .`, mas bien quieres hacerle unstage a un solo archivo, entonces puedes usar el mismo comando, pero especificando el archivo en particular:
 
     git reset HEAD nombre_del_archivo.ext
