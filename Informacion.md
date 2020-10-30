@@ -1,12 +1,12 @@
 # Informacion sobre GIT
 
-## ¿Qué es GIT?
+## 1.- ¿Qué es GIT?
 
 Git, es un software de control de versiones diseñado por Linus Torvalds. La pregunta es ¿qué es control de versiones? Pues bien, se define como control de versiones a la gestión de los diversos cambios que se realizan sobre los elementos de algún producto o una configuración del mismo es decir a la gestión de los diversos cambios que se realizan sobre los elementos de algún producto o una configuración, y para los que aún no les queda claro del todo, control de versiones es lo que se hace al momento de estar desarrollando un software o una página web. Exactamente es eso que haces cuando subes y actualizas tu código en la nube, o le añades alguna parte o simplemente le editas cosas que no funcionan como deberían o al menos no como tú esperarías.
 
 Y, entonces ¿a que le llamamos sistema de control de versiones? Muy sencillo, son todas las herramientas que nos permiten hacer todas esas modificaciones antes mencionadas en nuestro código y hacen que sea más fácil la administración de las distintas versiones de cada producto desarrollado; es decir Git.
 
-## Características
+## 2.- Características
 
 El diseño de Git se basó en BitKeeper y en Monotone. Originalmente fue diseñado como un motor de sistema de control de versiones de bajo nivel sobre el cual otros podrían codificar interfaces frontales, tales como Cogito o StGIT. Desde ese entonces hasta ahora el núcleo del proyecto Git se ha vuelto un sistema de control de versiones completo, utilizable en forma directa.
 
@@ -24,7 +24,7 @@ Entre las características más relevantes se encuentran:
 - Los renombrados se trabajan basándose en similitudes entre ficheros.
 - Realmacenamiento periódico en paquetes. Esto es relativamente eficiente para escritura de cambios y relativamente ineficiente para lectura si el reempaquetado no ocurre cada cierto tiempo.
 
-## Nubes de GIT
+## 3.- Nubes de GIT
 
 Github, GitLab, Bitbucket son herramientas basadas en la nube para construir software usando GIT. Normalmente cuando creas un repositorio a menos que tu empresa tenga montada su propia infraestructura dependerás de herramientas en la nube que faciliten a ti y a tu equipo trabajar en conjunto. Estas herramientas ayudan al trabajo con GIT, control de tickets y hacen más fácil toda la experiencia visual del trabajo.
 
